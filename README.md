@@ -1,6 +1,6 @@
-# huewebapp
+# Hue Web App
 
-> A web app controlling hue
+> A web app controlling hue, written in Vue.js
 
 ## Build Setup
 
