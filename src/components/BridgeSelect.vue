@@ -2,7 +2,7 @@
   <div>
     <el-card class="box-card">
       <div slot="header" class="clearfix">
-       <span>Select yoaur bridge</span>
+       <span>Select your bridge</span>
        <el-button style="float: right; padding: 3px 0" type="text">Refresh</el-button>
       </div>
 
