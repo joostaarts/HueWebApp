@@ -2,7 +2,7 @@
   <div>
     <el-card class="box-card">
       <div slot="header" class="clearfix">
-       <span>Select your bridge</span>
+       <span>Select yoaur bridge</span>
        <el-button style="float: right; padding: 3px 0" type="text">Refresh</el-button>
       </div>
 
@@ -24,7 +24,7 @@
         <el-table-column label="Command">
           <template slot-scope="scope">
             <div align="center">
-              <el-button size="mini">Select</el-button>
+              <el-button size="mini" @click="selectBridge(scope.row)">Select</el-button>
             </div>
           </template>
         </el-table-column>
@@ -36,7 +36,12 @@
 
 <script>
 export default {
-  name: 'BridgeSelect',
+  name: 'bridgeselect',
+  methods: {
+    selectBridge: function(bridge) {
+      this.$router.push({ name: 'huesystem', params: { bridgeId: bridge.id } })
+    }
+  },
   data() {
     return {
       msg: 'Select your bridge',
@@ -45,14 +50,14 @@ export default {
           name: 'Hue Bridge',
           softwareVersion: '123123123',
           ipAddress: '192.168.2.2',
-          id: '00120202020202',
+          id: '111111111111111111111111',
           mac: '00:00:00:00:00'
         },
         {
           name: 'Test bridge',
           softwareVersion: '123123123',
           ipAddress: '192.168.12.12',
-          id: '00120202020202',
+          id: '222222222222222222222',
           mac: '00:00:00:00:00'
         }
       ]

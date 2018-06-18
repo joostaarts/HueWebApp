@@ -20,7 +20,8 @@ module.exports = {
     'vue'
   ],
   // add your custom rules here
-  rules: {
+  rules: {    
+    "spaced-comment": 0,
     "space-before-function-paren": 0,
     // allow async-await
     'generator-star-spacing': 'off',
