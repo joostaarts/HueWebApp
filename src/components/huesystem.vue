@@ -8,21 +8,23 @@
       <el-container>
         <el-aside width="200px">
           <el-menu :default-openeds="['1', '2']">
+
             <el-submenu index="1">
               <template slot="title"><font-awesome-icon class="el-icon-menu" icon="home"/>Rooms</template>
-              <el-menu-item index="2-1">Living room</el-menu-item>
-              <el-menu-item index="2-2">Bed room</el-menu-item>
+              <el-menu-item index="1-1">Living room</el-menu-item>
+              <el-menu-item index="1-2">Bed room</el-menu-item>
             </el-submenu>
+
             <el-submenu index="2">
               <template slot="title"><font-awesome-icon class="el-icon-menu" icon="cog"/>Settings</template>
-
-              <el-submenu index="2-1-1">
+              <el-submenu index="2-1">
                 <template slot="title"><font-awesome-icon class="el-icon-menu" icon="sun"/>Scenes</template>
-                <el-menu-item v-for="o in Object.keys(scenes)" :key="o" index="2-2">{{scenes[o].name}}</el-menu-item>
+                <el-menu-item v-for="o in Object.keys(scenes)" :key="o" :index="'2-1-' + Object.keys(scenes).indexOf(o)">{{scenes[o].name}}</el-menu-item>
               </el-submenu>
 
               <el-menu-item index="2-2"><font-awesome-icon class="el-icon-menu" icon="wrench"/>Devices</el-menu-item>
             </el-submenu>
+
           </el-menu>
         </el-aside>
         <el-main>
