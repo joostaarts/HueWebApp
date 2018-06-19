@@ -6,7 +6,19 @@ import router from './router'
 import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
+import fontawesome from '@fortawesome/fontawesome'
+import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+
+import {
+  faSpinner,
+  faAngleLeft,
+  faAngleRight
+} from '@fortawesome/fontawesome-free-solid'
+
 Vue.use(Element)
+
+fontawesome.library.add(faSpinner, faAngleLeft, faAngleRight)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
 

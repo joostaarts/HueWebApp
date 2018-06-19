@@ -39,7 +39,7 @@ export default {
   name: 'bridgeselect',
   methods: {
     selectBridge: function(bridge) {
-      this.$router.push({ name: 'huesystem', params: { bridgeId: bridge.id } })
+      this.$router.push({ name: 'huesystem', params: { bridge: bridge } })
     }
   },
   data() {
@@ -47,14 +47,14 @@ export default {
       msg: 'Select your bridge',
       bridges: [
         {
-          name: 'Hue Bridge',
+          name: 'Hue Bridge work',
           softwareVersion: '123123123',
           ipAddress: '192.168.2.2',
           id: '111111111111111111111111',
           mac: '00:00:00:00:00'
         },
         {
-          name: 'Test bridge',
+          name: 'Hue bridge home',
           softwareVersion: '123123123',
           ipAddress: '192.168.12.12',
           id: '222222222222222222222',

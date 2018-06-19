@@ -8,7 +8,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/bridge',
+      path: '/',
       name: 'BridgeSelect',
       component: BridgeSelect
     },

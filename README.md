@@ -1,6 +1,7 @@
 # Hue Web App
 
-> A web app controlling hue, written in Vue.js
+> A web app for controlling Hue lighting system, written in Vue.js
+
 
 ## Build Setup
 
@@ -18,7 +19,7 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+After running "npm run dev", open a web browser and go to http://localhost:8080
 
 ## UI Component library
-http://element.eleme.io/#/en-US/component/installation
+Component library used: http://element.eleme.io/#/en-US/component/installation
