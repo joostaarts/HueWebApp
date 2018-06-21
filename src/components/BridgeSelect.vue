@@ -42,6 +42,17 @@ export default {
       this.$router.push({ name: 'huesystem', params: { bridge: bridge } })
     }
   },
+  mounted() {
+    this.$http.get('http://localhost:9000/api/bridges').then(
+      function(response) {
+        this.bridges = response.data
+      },
+      function(error) {
+        this.bridge = []
+        console.log(error.statusText)
+      }
+    )
+  },
   data() {
     return {
       msg: 'Select your bridge',

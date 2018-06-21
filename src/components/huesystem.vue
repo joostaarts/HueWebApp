@@ -1,4 +1,3 @@
-
 <template>
   <div style="height:98vh;">
     <el-container>
@@ -112,10 +111,10 @@ export default {
   height: 100%;
 }
 .el-aside {
-  background-color: rgb(104, 93, 93);
+  background-color: rgb(102, 102, 102);
 }
 .el-header {
-  background-color: rgb(85, 70, 70);
+  background-color: rgb(87, 87, 87);
 }
 .el-header h1 {
   color: white;
@@ -124,6 +123,6 @@ export default {
   background-color: rgb(233, 225, 225);
 }
 .box-card {
-  background-color: rgb(221, 211, 211);
+  background-color: rgb(211, 211, 211);
 }
 </style>
