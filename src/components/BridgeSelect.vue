@@ -9,13 +9,13 @@
       <el-table border :default-expand-all="bridges.length === 1" :show-header="false" :data="bridges" style="width: 100%">
         <el-table-column type="expand">
           <template slot-scope="props" >
-            <p>Software Version: {{ props.row.softwareVersion }}</p>
-            <p>ID: {{ props.row.id }}</p>
-            <p>Mac: {{ props.row.mac }}</p>
+            <p>Manufacturer: {{ props.row.manufacturer }}</p>
+            <p>Serial Number: {{ props.row.serialNumber }}</p>
+            <p>Model: {{ props.row.modelName }}</p>
           </template>
         </el-table-column>
 
-        <el-table-column label="Name" prop="name">
+        <el-table-column label="Name" prop="friendlyName">
         </el-table-column>
 
         <el-table-column label="IP" prop="ipAddress">
@@ -43,12 +43,14 @@ export default {
     }
   },
   mounted() {
-    this.$http.get('http://localhost:9000/api/bridges').then(
+    var that = this
+    this.$http.get('http://localhost:8080/api/bridges').then(
       function(response) {
-        this.bridges = response.data
+        console.log(response.data[0])
+        that.bridges = response.data
       },
       function(error) {
-        this.bridge = []
+        that.bridge = []
         console.log(error.statusText)
       }
     )
