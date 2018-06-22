@@ -2,7 +2,7 @@
   <div style="height:98vh;">
     <el-container>
       <el-header>
-        <h1>{{ this.bridge.friendlyName }}</h1>
+        <h1>{{ this.bridge.name }}</h1>
       </el-header>
       <el-container>
         <el-aside width="200px">

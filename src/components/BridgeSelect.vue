@@ -8,14 +8,15 @@
 
       <el-table border :default-expand-all="bridges.length === 1" :show-header="false" :data="bridges" style="width: 100%">
         <el-table-column type="expand">
-          <template slot-scope="props" >
-            <p>Manufacturer: {{ props.row.manufacturer }}</p>
-            <p>Serial Number: {{ props.row.serialNumber }}</p>
-            <p>Model: {{ props.row.modelName }}</p>
+          <template slot-scope="props">
+            <p>Bridge ID: {{ props.row.smallconfig.bridgeid }}</p>
+            <p>Model: {{ props.row.modelname }}</p>
+            <p>Software version: {{ props.row.smallconfig.swversion }}</p>
+            <p>Url Base: <a :href="props.row.urlbase" target="_">{{props.row.urlbase}}</a></p>
           </template>
         </el-table-column>
 
-        <el-table-column label="Name" prop="friendlyName">
+        <el-table-column label="Name" prop="smallconfig.name">
         </el-table-column>
 
         <el-table-column label="IP" prop="ipAddress">
@@ -58,22 +59,7 @@ export default {
   data() {
     return {
       msg: 'Select your bridge',
-      bridges: [
-        {
-          name: 'Hue Bridge work',
-          softwareVersion: '123123123',
-          ipAddress: '192.168.2.2',
-          id: '111111111111111111111111',
-          mac: '00:00:00:00:00'
-        },
-        {
-          name: 'Hue bridge home',
-          softwareVersion: '123123123',
-          ipAddress: '192.168.12.12',
-          id: '222222222222222222222',
-          mac: '00:00:00:00:00'
-        }
-      ]
+      bridges: []
     }
   }
 }
