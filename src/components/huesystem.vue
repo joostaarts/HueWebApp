@@ -63,7 +63,7 @@ import scenes from '../mocks/scenes'
 
 export default {
   name: 'huesystem',
-  props: ['bridge'],
+  // props: ['bridge'],
   methods: {
     partitionArray: function(array, rowNr, itemsPerRow) {
       rowNr -= 1
@@ -75,6 +75,7 @@ export default {
   },
   data() {
     return {
+      bridge: [],
       lights: light.lightMock,
       scenes: scenes.scenesMock
     }

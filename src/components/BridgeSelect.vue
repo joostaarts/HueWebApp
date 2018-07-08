@@ -36,23 +36,27 @@
 </template>
 
 <script>
+var consts = require('../constants')
+
 export default {
   name: 'bridgeselect',
   methods: {
     selectBridge: function(bridge) {
+      console.log(bridge.serialnumber)
+      // this.$http.get()
       this.$router.push({ name: 'huesystem', params: { bridge: bridge } })
     }
   },
   mounted() {
     var that = this
-    this.$http.get('http://localhost:8080/api/bridges').then(
+    this.$http.get(consts.API_GETBRIDGES).then(
       function(response) {
         console.log(response.data[0])
         that.bridges = response.data
       },
       function(error) {
         that.bridge = []
-        console.log(error.statusText)
+        console.log(error)
       }
     )
   },
